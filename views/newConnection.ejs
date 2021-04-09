@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+  <title>New Connection</title>
+</head>
+
+<body>
+  <%- include('./partials/header.ejs'); -%>
+  <section>
+    <form class="newConnection" action="#" method="POST">
+      <h2>New Connection</h2>
+
+      <label for="topic">Topic:</label>
+      <select id="topic" name="topic">
+        <option value="Virtual">Vrtual Event</option>
+        <option value="Food">FREE FOOD</option>
+      </select>
+      <br>
+
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="">
+      <br>
+
+      <label for="details">Details:</label><br>
+      <textarea id="details" name="details" rows="8" cols="80"></textarea>
+      <br>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" value="">
+      <br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" value="">
+      <br>
+
+      <label for="time">Start Time:</label>
+      <input type="time" id="start_time" name="start time" value="">
+      <br>
+
+      <label for="time">End Time:</label>
+      <input type="time" id="end_time" name="end time" value="">
+      <br>
+
+      <input type="submit" name="submit" value="Create Connection">
+    </form>
+  </section>
+  <%- include('./partials/footer.ejs'); -%>
+</body>
+
+
+
+</html>

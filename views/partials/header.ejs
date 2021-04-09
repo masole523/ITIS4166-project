@@ -1,0 +1,32 @@
+<header>
+
+  <div class="nav_top">
+
+    <a href="/" id="logo_link">
+      <img id="logo" src="/assets/images/logo.png" alt="logo">
+    </a>
+
+    <ul class="user_buttons">
+      <li><a href="./newConnection">Start a new connection</a></li>
+    </ul>
+  </div>
+
+  <br>
+
+  <ul class="nav_left">
+    <li><a href="/connections">Connections</a></li>
+  </ul>
+
+  <ul class="nav_right">
+    <% if (typeof theUser != 'undefined'){ %>
+      <li><a href="/savedConnections/logout">Log Out</a></li>
+      <% if (typeof theUser !== 'undefined'){ %>
+        <li><a href="/savedConnections" class="user_name"><%= theUser._userId %></a></li>
+      <% } %>
+    <% }else{ %>
+    <li><a href="/savedConnections">Login</a></li>
+    <li><a href="/savedConnections">Sign up</a></li>
+    <% } %>
+  </ul>
+
+</header>

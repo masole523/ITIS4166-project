@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+  <title>Saved Connections</title>
+</head>
+
+
+<body>
+  <%- include('./partials/header.ejs'); -%>
+
+  <section>
+    <h2>Your Saved Connections</h2>
+    <% if(userConnections.length == 0 || userConnections == undefined){ %>
+      <h4>You have no connections</h4>
+      <% }else{ %>
+        <form method="post">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Connection</th>
+                <th scope="col">Category</th>
+                <th scope="col">RSVP</th>
+                <th scope="col span=2">Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(let j = 0; j < userConnections.length; j++){ %>
+                <tr>
+                  <td><%= userConnections[j]._connection._connectionName %></td>
+                  <td><%= userConnections[j]._connection._connectionTopic %></td>
+                  <td><%= userConnections[j]._rsvp %></td>
+                  <td>
+                    <input type="hidden" name="viewConnection" value="<% userConnections[j]._connection._connectionId %>"/>
+                    <button type="submit" formaction="/connection/<%= userConnections[j]._connection._connectionId %>">Update</button>
+                    <button type="submit" formaction="/savedConnections/delete"
+                    name="connectionId" value="<%= userConnections[j]._connection._connectionId %>">Delete</button>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </form>
+        <% } %>
+    </section>
+    <%- include('./partials/footer.ejs'); -%>
+  </body>
+
+</html>

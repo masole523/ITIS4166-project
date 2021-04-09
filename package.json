@@ -1,0 +1,20 @@
+{
+  "name": "cortland noda connections",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-sessions": "~1.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "author": "Cole Bauguess"
+}

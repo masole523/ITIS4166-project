@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+  <title>Connections</title>
+</head>
+
+
+<body>
+  <%- include('./partials/header.ejs'); -%>
+  <section>
+    <h2>Connections</h2>
+
+    <h3>Virtual Events</h3>
+    <ul class="links_list">
+
+      <% for(let i = 0; i < data.connections.length; i++){ %>
+        <% if(data.connections[i]._connectionTopic == "Virtual"){ %>
+          <li><a href="/connection/<%= data.connections[i]._connectionId %>"><%= data.connections[i]._connectionName %></a></li>
+        <% } %>
+      <% } %>
+    </ul>
+
+    <h3>FREE FOOD</h3>
+    <ul class="links_list">
+
+      <% for(let i = 0; i < data.connections.length; i++){ %>
+        <% if(data.connections[i]._connectionTopic == "Food"){ %>
+          <li><a href="/connection/<%= data.connections[i]._connectionId %>"><%= data.connections[i]._connectionName %></a></li>
+        <% } %>
+      <% } %>
+    </ul>
+  </section>
+
+  <%- include('./partials/footer.ejs'); -%>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+body{
+  margin: 0;
+  overflow: auto;
+  font-family: helvetica;
+  background-color: #FFF5EE;
+}
+
+header{
+  background-color: #008B8B;
+  overflow: auto;
+  padding: 10px;
+}
+
+header ul{
+  list-style-type: none;
+  display: inline;
+}
+
+header ul a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+	color: #FFFFFF;
+}
+
+section{
+  height: 600px;
+  overflow: auto;
+  text-align: justify;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+
+.welcome{
+  text-align: center;
+}
+
+footer{
+  background-color: #008B8B;
+  overflow: auto;
+  padding: 10px;
+  list-style-type: none;
+
+}
+
+footer li{
+  list-style-type: none;
+}
+
+footer p{
+
+  word-spacing: 30px;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+footer img{
+  float: right;
+	width: 7%;
+	height: 7%;
+}
+.user_buttons a{
+  float:right;
+  margin-bottom: 10px;
+}
+
+.user_buttons p{
+  font-size: 40px;
+  font-family: tahoma;
+  margin-left: 10px;
+}
+
+.nav_left li{
+  float: left;
+}
+
+.nav_right li{
+  float: right;
+}
+
+.nav_top{
+  overflow: auto;
+  border-bottom: 1px solid black;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.nav_top h1{
+  font-size: 50px;
+  display: inline;
+}
+
+#logo{
+  width: 175px;
+  height: auto;
+}
+
+#logo_link{
+  text-decoration: none;
+  color: black;
+}
+
+#home {
+  display: flex;
+}
+
+#cort {
+  flex: 33.33%;
+  padding: 5px;
+  width: 33.33%;
+}
+
+.site_map{
+  color: white;
+  text-decoration: none;
+}
+
+.site_map a{
+  color: white;
+  text-decoration: none;
+}
+
+.event_details li{
+  list-style-type: none;
+  width: 500px;
+}
+
+#event_photo{
+  float: left;
+  margin-right: 10px;
+  height: 110px;
+  margin-top: 15px;
+}
+
+#contact_photo{
+  float: right;
+  width: 50%;
+}
+
+#office_photo{
+  width: 50%;
+}
+
+.rsvp_box{
+  border: 2px ridge #708090;
+  padding: 10px;
+  float: right;
+  background-color: #FFDAB9;
+  width: 27%;
+}
+
+button{
+  background-color: lightblue;
+}
+
+#rsvp{
+  width: 20%;
+  font-size: 15px;
+}
+
+.green{
+  background-color: #9ACD32;
+}
+
+.red{
+  background-color: #CD5C5C;
+}
+
+.blue{
+  background-color: #7FFFD4;
+}
+
+.details_box{
+  float: left;
+}
+
+.edit_button{
+  background-color: #737373;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+table, th{
+  border: 1px solid black;
+}
+
+th{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+td{
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.user_table{
+  text-align: center;
+}
+
+.links_list li{
+  list-style-type: none;
+}
+
+.links_list li a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.links_list li a:hover{
+  text-decoration: #FFD700 wavy underline;
+}
+.newConnection{
+  background-color: lightgrey;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.newConnection input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

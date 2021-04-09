@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+  <title><%= data._connectionTopic %> - <%= data._connectionName %></title>
+</head>
+
+<body>
+  <%- include('./partials/header.ejs'); -%>
+  <section>
+    <h2><%= data._connectionTopic %> - <%= data._connectionName %></h2>
+
+    <p><%= data._details %></p>
+
+    <div class="details_box">
+      <img src="/assets/images/event.png" alt="event" id="event_photo">
+      <ul class="event_details">
+        <li>Hosted by: <%= data._host %></li>
+        <li>Date: <%= data._date %></li>
+        <li>Begins at: <%= data._startTime %></li>
+        <li>Ends at: <%= data._endTime %></li>
+        <li>Where to go: <%= data._locationName %></li>
+      </ul>
+    </div>
+
+    <div class="rsvp_box">
+      <form method="POST">
+        <label for="rsvp">Will you be attending this event?</label><br><br>
+        <input hidden name="connectionId" value="<%= data._connectionId %>">
+        <button type="submit" formaction="/savedConnections/rsvp" name="rsvp" id="rsvp" class="green" value="Yes">Yes</button>
+        <button type="submit" formaction="/savedConnections/rsvp" name="rsvp" id="rsvp" class="red" value="No">No</button>
+        <button type="submit" formaction="/savedConnections/rsvp" name="rsvp" id="rsvp" class="blue" value="Maybe">Maybe</button>
+      </form>
+    </div>
+  </section>
+  <%- include('./partials/footer.ejs'); -%>
+</body>
+
+
+
+</html>
